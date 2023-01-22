@@ -5,23 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<style>
+    body {
+ 
+    background-color: #997fa8;}
 
+</style>
     <title>ZCHPC_AFIS</title>
 </head>
 <body>
-    <p><h1 align="center">ZCHPC Automated Fingerprint Identification System</h1></p>
+
 <div class="container">
     <div class="row">
-    <form enctype="multipart/form-data" action="{{url_for('process')}}" method="post">
-        <dl>
+        <p><h1 align="center">ZCHPC Automated Fingerprint Identification System</h1></p>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><form enctype="multipart/form-data" action="{{url_for('process')}}" method="post">
+            <dl>
+                <p>
+                    File:<input type="file" name="filename" class="form-control" required/>
+                </p>
+            </dl>
             <p>
-                File:<input type="file" name="filename" class="form-control" required/>
+                <input type="submit" class="btn btn-info"/>
             </p>
-        </dl>
-        <p>
-            <input type="submit" value="Upload" class="btn btn-info"/>
-        </p>
-    </form>
+        </form></div>
+        <div class="col-md-4"></div>
+    
     </div>
 </div>
 </body>
